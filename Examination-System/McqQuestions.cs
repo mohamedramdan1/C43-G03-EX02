@@ -8,12 +8,19 @@ namespace Examination_System
 {
     internal class McqQuestions : Questions
     {
+        #region Property
         public override string? Header => "MCQ Question";
 
+        #endregion
+
+        #region Constuctors
         public McqQuestions()
         {
             AnswerList = new Answers[3];
         }
+        #endregion
+
+        #region Methods
         public override void AddQuestion()
         {
             Console.WriteLine(Header);
@@ -56,6 +63,7 @@ namespace Examination_System
 
             Console.Clear();
 
-        }
+        } 
+        #endregion
     }
 }
