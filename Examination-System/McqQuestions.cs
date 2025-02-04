@@ -50,7 +50,7 @@ namespace Examination_System
             {
                 Console.WriteLine("Please Specify the Right Choice Of Qusetion:");
             }
-            while (!int.TryParse(Console.ReadLine(), out right_answer_ID) || right_answer_ID < 0 || right_answer_ID is not 1 or 2 or 3);
+            while (!int.TryParse(Console.ReadLine(), out right_answer_ID) || right_answer_ID < 0 || !(right_answer_ID is 1 or 2 or 3));
             Right_Answer.AnswerId = right_answer_ID;
             Right_Answer.AnswerText = AnswerList?[right_answer_ID - 1].AnswerText;
 
