@@ -15,6 +15,10 @@ namespace Examination_System
         #endregion
 
         #region Constructor
+        public Answers()
+        {
+            
+        }
         public Answers(int answerId, string? answerText)
         {
             AnswerId = answerId;
