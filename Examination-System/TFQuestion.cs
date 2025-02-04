@@ -50,6 +50,8 @@ namespace Examination_System
             while (!int.TryParse(Console.ReadLine(), out right_answer_ID) || right_answer_ID < 0 || !(right_answer_ID is 1 or 2));
             Right_Answer.AnswerId = right_answer_ID;
             Right_Answer.AnswerText = AnswerList?[right_answer_ID - 1].AnswerText;
+
+            Console.Clear();
         }
         #endregion
     }
