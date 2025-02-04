@@ -13,8 +13,8 @@ namespace Examination_System
         public string? Body { get; set; }
         public int Mark { get; set; }
         public Answers[]? AnswerList { get; set; }
-        public Answers? Right_Answer { get; set; }
-        public Answers? User_Answer { get; set; }
+        public Answers Right_Answer { get; set; }
+        public Answers User_Answer { get; set; }
         #endregion
 
         #region Constructor
