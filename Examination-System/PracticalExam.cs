@@ -43,8 +43,9 @@ namespace Examination_System
                     int userAnswerId;
                     do
                     {
-                        Console.WriteLine("Please Enter The answer Id ");
+                        Console.Write("Please Enter The answer Id : ");
                     } while (!(int.TryParse(Console.ReadLine(), out userAnswerId) && (userAnswerId is 1 or 2 or 3)));
+                    Console.WriteLine();
                     question.User_Answer.AnswerId = userAnswerId;
                     question.User_Answer.AnswerText = question?.AnswerList?[userAnswerId-1].AnswerText;
                 }
@@ -64,6 +65,8 @@ namespace Examination_System
 
                 Console.WriteLine($"Question {i + 1})\t{Questions[i].Body} : {Questions[i].User_Answer.AnswerText}");
                 Console.WriteLine($"Correct Answer : {Questions[i].Right_Answer.AnswerText}");
+                Console.WriteLine("===============================");
+
             }
         }
         #endregion

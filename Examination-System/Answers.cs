@@ -29,7 +29,7 @@ namespace Examination_System
         #region Methods
         public override string ToString()
         {
-            return $"Answer Id: {AnswerId}-Answer Text: {AnswerText}";
+            return $"{AnswerId}.  {AnswerText}";
         }
         #endregion
     }

@@ -30,7 +30,7 @@ namespace Examination_System
 
         public override string ToString()
         {
-            return $"{Header}\tMark:{Mark}\n" +
+            return $"{Header}\tMark:({Mark})\n" +
                $"\n{Body}\n"; 
         }
         #endregion

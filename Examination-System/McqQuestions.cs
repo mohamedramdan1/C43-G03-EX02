@@ -37,7 +37,7 @@ namespace Examination_System
                 Console.WriteLine("Please Enter the Mark of Qusetion: ");
             }
             while (!int.TryParse(Console.ReadLine(), out mark) || mark < 0);
-
+            Mark = mark;
 
             Console.WriteLine("The Choice Of Question: ");
             for (int i = 0; i < AnswerList?.Length; i++)

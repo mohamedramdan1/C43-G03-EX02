@@ -25,19 +25,20 @@ namespace Examination_System
                 int choice;
                 do
                 {
-                    Console.WriteLine("Please Enter the Type of Question (1 for MCQ | 2 For True or False): ");
+                    Console.Write($"Please Enter the Type of Question ({i+1}) (1 For True or False || 2 for MCQ ): ");
                 }
                 while (!(int.TryParse(Console.ReadLine(), out choice) && (choice is 1 or 2)));
                 Console.Clear();
 
                 if (choice == 1)
                 {
-                    Questions[i] = new McqQuestions();
+                    Questions[i] = new TFQuestion();
                     Questions[i].AddQuestion();
+                    
                 }
                 else
                 {
-                    Questions[i] = new TFQuestion();
+                    Questions[i] = new McqQuestions();
                     Questions[i].AddQuestion();
                 }
             }
@@ -61,16 +62,17 @@ namespace Examination_System
                     {
                         do
                         {
-                            Console.WriteLine("Please Enter The answer Id ");
+                            Console.Write("Please Enter The answer Id: ");
                         } while (!(int.TryParse(Console.ReadLine(), out userAnswerId) && (userAnswerId is 1 or 2 or 3)));
                     }
                     else
                     {
                         do
                         {
-                            Console.WriteLine("Please Enter The answer Id (1 For True | 2 For False) ");
+                            Console.Write("Please Enter The answer Id (1 For True | 2 For False): ");
                         } while (!(int.TryParse(Console.ReadLine(), out userAnswerId) && (userAnswerId is 1 or 2)));
                     }
+                    Console.WriteLine();
                     question.User_Answer.AnswerId = userAnswerId;
                     question.User_Answer.AnswerText = question?.AnswerList?[userAnswerId - 1].AnswerText;
                 }
@@ -90,6 +92,7 @@ namespace Examination_System
 
                 Console.WriteLine($"Question {i+1})\t{Questions[i].Body} : {Questions[i].User_Answer.AnswerText}");
                 Console.WriteLine($"Correct Answer : {Questions[i].Right_Answer.AnswerText}");
+                Console.WriteLine("===============================");
             }
             Console.WriteLine($"Your Grade is {Grade} from {TotalMarks}");
 
