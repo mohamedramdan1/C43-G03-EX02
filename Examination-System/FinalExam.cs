@@ -10,7 +10,7 @@ namespace Examination_System
     internal class FinalExam : Exam
     {
         #region Constructor
-        public FinalExam(int time, int numberofQuestion, Questions[]? questions) : base(time, numberofQuestion, questions)
+        public FinalExam(int time, int numberofQuestion) : base(time, numberofQuestion)
         {
 
         }

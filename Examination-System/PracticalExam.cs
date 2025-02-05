@@ -9,7 +9,7 @@ namespace Examination_System
     internal class PracticalExam : Exam
     {
         #region Constructor
-        public PracticalExam(int time, int numberofQuestion, Questions[]? questions) : base(time, numberofQuestion, questions)
+        public PracticalExam(int time, int numberofQuestion) : base(time, numberofQuestion)
         {
 
         }
