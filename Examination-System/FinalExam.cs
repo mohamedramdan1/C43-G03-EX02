@@ -72,7 +72,7 @@ namespace Examination_System
                             Console.Write("Please Enter The answer Id (1 For True | 2 For False): ");
                         } while (!(int.TryParse(Console.ReadLine(), out userAnswerId) && (userAnswerId is 1 or 2)));
                     }
-                    Console.WriteLine();
+                    Console.WriteLine("====================================================");
                     question.User_Answer.AnswerId = userAnswerId;
                     question.User_Answer.AnswerText = question?.AnswerList?[userAnswerId - 1].AnswerText;
                 }

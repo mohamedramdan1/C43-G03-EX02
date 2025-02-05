@@ -45,7 +45,7 @@ namespace Examination_System
                     {
                         Console.Write("Please Enter The answer Id : ");
                     } while (!(int.TryParse(Console.ReadLine(), out userAnswerId) && (userAnswerId is 1 or 2 or 3)));
-                    Console.WriteLine();
+                    Console.WriteLine("====================================================");
                     question.User_Answer.AnswerId = userAnswerId;
                     question.User_Answer.AnswerText = question?.AnswerList?[userAnswerId-1].AnswerText;
                 }
